@@ -10,7 +10,7 @@ export const siteConfig = {
   availability: { enabled: false, text: 'Open to Research & Engineering Opportunities' },
   social: {
     github: 'https://github.com/cs25m116',
-    linkedin: 'YOUR-LINK', // TODO
+    linkedin: 'https://www.linkedin.com/in/ravee-mishra-36b41a3ab/', // TODO
     googleScholar: '',
     twitter: '',
     medium: '',
