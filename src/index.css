@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+body { @apply bg-bg font-body text-ink antialiased; }
+h1, h2, h3, h4, .font-heading { font-weight: var(--heading-weight, 400) !important; }
+.cursor { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+::selection { background: rgb(var(--c-primary) / .3); }
+:focus-visible { outline: 2px solid rgb(var(--c-primary)); outline-offset: 3px; border-radius: 6px; }
+
+@layer components {
+  .card { @apply rounded-card border border-line bg-surface/70 transition-colors; }
+  html[data-glass='true'] .card { @apply backdrop-blur-md; }
+  .card-hover:hover { border-color: rgb(var(--c-primary) / .5); }
+  html[data-glow='true'] .card-hover:hover { box-shadow: 0 0 32px -12px rgb(var(--c-primary) / .45); }
+  .mono { @apply font-mono text-xs text-muted; }
+  .chip { @apply inline-block rounded-md border border-line bg-elevated px-2 py-0.5 font-mono text-xs text-soft; }
+  .chip-on { @apply border-primary/60 text-primary; background: rgb(var(--c-primary) / .1); }
+  .btn { @apply inline-flex items-center gap-2 rounded-lg border border-line bg-elevated px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-primary/60 hover:text-primary; }
+  .btn-primary { @apply border-primary bg-primary text-bg hover:bg-primary/90 hover:text-bg; }
+  .grad-text { background: linear-gradient(100deg, rgb(var(--c-primary)), rgb(var(--c-secondary)) 60%, rgb(var(--c-accent))); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .grid-overlay { background-image: linear-gradient(rgb(var(--c-border) / .35) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--c-border) / .35) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%); }
+  .scroll-x { @apply overflow-x-auto; }
+}
