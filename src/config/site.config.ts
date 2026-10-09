@@ -10,7 +10,7 @@ export const siteConfig = {
   availability: { enabled: false, text: 'Open to Research & Engineering Opportunities' },
   social: {
     github: 'https://github.com/cs25m116',
-    linkedin: '', // TODO
+    linkedin: 'YOUR-LINK', // TODO
     googleScholar: '',
     twitter: '',
     medium: '',
