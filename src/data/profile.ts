@@ -15,7 +15,7 @@ export const profile: Profile = {
   terminal: {
     enabled: true,
     lines: [
-      { cmd: 'whoami', out: ['computer_vision_scientist'] },
+      { cmd: 'whoami', out: ['ai_ml_engineer'] },
       { cmd: 'focus', out: ['deep_learning', 'machine_learning', 'computer_vision'] },
       { cmd: 'currently_learning', out: ['multi_modal_models'] },
     ],

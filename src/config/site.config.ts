@@ -4,7 +4,7 @@ export const siteConfig = {
   title: 'Computer Scientist | AI/ML Researcher',
   tagline: 'Building intelligent systems at the intersection of machine learning, computer vision, mathematical modeling and software engineering.',
   location: 'India',
-  email: '', // TODO: your@email.com
+  email: '',
   resume: '/resume.pdf', // file lives in public/resume.pdf
   profileImage: '/profile.png', // file lives in public/profile.png
   availability: { enabled: false, text: 'Open to Research & Engineering Opportunities' },

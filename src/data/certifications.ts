@@ -8,7 +8,7 @@ export const certifications: Certificate[] = [
     date: '2026',
   },
   {
-    title: 'Generative Adversarial Networks (GANs) – Basics', // TODO: replace with the exact course title
+    title: 'Generative Adversarial Networks (GANs) – Basics',
     issuer: 'Coursera',
     date: '2026',
   },

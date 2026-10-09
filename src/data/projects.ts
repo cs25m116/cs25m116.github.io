@@ -17,11 +17,10 @@ export const projects: Project[] = [
     architecture: 'GeoTIFF + annotations → Mask2Former (Hugging Face) → class-wise mask → GeoTIFF export using the source image georeference → overlay visualization (input, ground truth, prediction).',
     implementation: 'Deterministic class-wise colouring keeps ground truth and predictions visually consistent. Ground truth is taken from annotation JSON when available, with the mask raster as fallback. Weights are shared through Google Drive because of GitHub size limits.',
     results: [
-      'TODO: mIoU / per-class IoU on the validation set',
       'Planned: sliding-window inference (1024×1024 tiles, stride 512) with stitching back into a full-scene GeoTIFF',
     ],
     technologies: ['PyTorch', 'Mask2Former', 'Transformers', 'rasterio', 'OpenCV', 'Albumentations', 'GeoTIFF'],
-    github: '', // TODO
+    github: '',
   },
   {
     id: 'yolov9-cbam',
@@ -34,8 +33,6 @@ export const projects: Project[] = [
     problem: 'Does adding lightweight channel attention to YOLOv9 improve detection accuracy enough to justify the extra compute?',
     approach: 'Converted Pascal VOC 2007 and 2012 annotations to YOLO format (20 classes), then trained YOLOv9 with CBAM-style channel attention in the gelan-c backbone under the same settings as the baseline.',
     implementation: 'Handled the DualDDetect head requirements and distributed training with torchrun. Outputs include confusion matrices, precision-recall curves, detection samples and per-stage timing analysis.',
-    results: ['TODO: mAP@0.5 baseline vs with attention', 'TODO: latency / parameter overhead'],
-    metrics: [{ label: 'mAP@0.5 (baseline → CBAM)', value: 'TODO' }],
     technologies: ['PyTorch', 'YOLOv9', 'CBAM', 'Pascal VOC', 'torchrun'],
     github: 'https://github.com/cs25m116/channel-attention-on-yolo-v9',
     video: 'https://github.com/cs25m116/channel-attention-on-yolo-v9/blob/main/screenshots/YOLO%20v9.mp4',
@@ -66,7 +63,7 @@ export const projects: Project[] = [
       { label: 'DenseNet-121 under FGSM', value: '44.31%' },
     ],
     technologies: ['PyTorch', 'torchvision', 'ResNet-34', 'DenseNet-121', 'FGSM', 'PGD', 'ImageNet'],
-    github: '', // TODO
+    github: '',
   },
   {
     id: 'speech-deepfake',
@@ -84,7 +81,7 @@ export const projects: Project[] = [
       'Planned: ECAPA-TDNN baseline, WavLM frontend, VoIP robustness tests and edge deployment',
     ],
     technologies: ['PyTorch', 'wav2vec2', 'WavLM', 'ECAPA-TDNN', 'LibriSpeech', 'VCTK', 'Common Voice'],
-    github: '', // TODO
+    github: '',
   },
   {
     id: 'gpt2-scratch',
@@ -96,7 +93,7 @@ export const projects: Project[] = [
     description: 'GPT-2 architecture implemented from scratch in PyTorch, loading OpenAI\'s public checkpoint and served through a chat interface.',
     approach: 'Wrote the full transformer (attention, blocks, embeddings) by hand, then loaded the released 124M weights into it to verify correctness.',
     technologies: ['PyTorch', 'Transformers', 'Chainlit'],
-    github: '', // TODO
+    github: '',
   },
   {
     id: 'htr-micl',
